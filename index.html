@@ -48,19 +48,6 @@
             content: "";
             pointer-events: none;
         }
-        .scroll-reveal {
-            opacity: 0;
-            transition: opacity 600ms ease;
-        }
-        .scroll-reveal.is-visible {
-            opacity: 1;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .scroll-reveal {
-                opacity: 1;
-                transition: none;
-            }
-        }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -562,30 +549,6 @@
                 cover.replaceWith(video);
             });
         });
-        if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                rootMargin: `0px 0px -${Math.round(window.innerHeight / 3)}px 0px`,
-                threshold: 0
-            });
-            const revealTargets = document.querySelectorAll(
-                '#showreel > .inline-flex, #showreel > h1, #showreel > p, #showreel > .mt-10, ' +
-                '#youtube > .mb-10, #youtube .grid > div, ' +
-                '#shorts > .mb-10, #shorts .grid > div, ' +
-                '#processo > .mb-10, #processo > .grid > div, #processo > .mt-12, ' +
-                '#contato .max-w-4xl > *'
-            );
-            revealTargets.forEach((element) => {
-                element.classList.add('scroll-reveal');
-                revealObserver.observe(element);
-            });
-        }
     </script>
 </body>
 </html>
