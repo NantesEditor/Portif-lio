@@ -195,8 +195,13 @@
             
             <!-- SHORT 1 -->
             <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
-                <div class="w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe class="w-full h-full" src="https://drive.google.com/file/d/1j8QRbO46o-NDCfC9gOK7WQHB5vQ4Cj9o/preview" title="Codinome Winchester" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                <div class="short-video w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
+                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group" aria-label="Reproduzir Codinome Winchester">
+                        <img class="absolute inset-0 w-full h-full object-cover" src="https://drive.google.com/thumbnail?id=1j8QRbO46o-NDCfC9gOK7WQHB5vQ4Cj9o&amp;sz=w1000" alt="Capa do vídeo Codinome Winchester">
+                        <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-black/70 text-white group-hover:bg-brand-cyan group-focus-visible:ring-2 group-focus-visible:ring-white transition">
+                            <i data-lucide="play" class="w-7 h-7 fill-current"></i>
+                        </span>
+                    </button>
                 </div>
                 <div class="w-full mt-3">
                     <h4 class="font-semibold text-sm">Codinome Winchester</h4>
@@ -315,6 +320,17 @@
     <!-- Inicializador dos Ícones Lucide -->
     <script>
         lucide.createIcons();
+        document.querySelectorAll('.short-video-cover').forEach((cover) => {
+            cover.addEventListener('click', () => {
+                const video = document.createElement('iframe');
+                video.className = 'w-full h-full';
+                video.src = 'https://drive.google.com/file/d/1j8QRbO46o-NDCfC9gOK7WQHB5vQ4Cj9o/preview';
+                video.title = 'Codinome Winchester';
+                video.allow = 'autoplay';
+                video.allowFullscreen = true;
+                cover.replaceWith(video);
+            });
+        });
     </script>
 </body>
 </html>
