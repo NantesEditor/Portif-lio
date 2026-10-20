@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Nantes Edit | Portfólio de Edição de Vídeo</title>
-    
-    <!-- FAVICON (ÍCONE DA ABA DO NAVEGADOR) -->
-    <link rel="icon" type="image/png" href="logo.png">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Plus Jakarta Sans & Unbounded (Para a Marca) -->
@@ -56,17 +52,17 @@
         }
     </style>
 </head>
-<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-cyan selection:text-black">
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-accent selection:text-white">
 
     <!-- HEADER / NAVEGAÇÃO -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/85 backdrop-blur-md border-b border-brand-border">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3.5 group">
                 <!-- LOGO DA MARCA -->
-                <div class="relative flex items-center justify-center shrink-0">
-                    <img src="logo.png" alt="Pedro Nantes Edit Logo" class="h-12 w-auto max-w-[150px] object-contain drop-shadow-[0_0_12px_rgba(6,182,212,0.6)] group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; document.getElementById('logo-fallback-svg').classList.remove('hidden');">
+                <div class="relative flex items-center justify-center">
+                    <img src="logo.png" alt="Pedro Nantes Edit Logo" class="h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(6,182,212,0.6)] group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; document.getElementById('logo-fallback-svg').classList.remove('hidden');">
                     
-                    <!-- FALLBACK SVG (EXIBIDO CASO A IMAGEM NÃO CARREGUE OU AINDA NÃO ESTEJA NO DIRETÓRIO) -->
+                    <!-- FALLBACK SVG (EXIBIDO SE A IMAGEM NÃO ESTIVER NO MESMO DIRETÓRIO) -->
                     <div id="logo-fallback-svg" class="hidden relative w-10 h-10 flex items-center justify-center">
                         <svg class="w-10 h-10 text-brand-cyan drop-shadow-[0_0_12px_rgba(6,182,212,0.8)]" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z" />
@@ -96,8 +92,8 @@
                 <a href="#contato" class="hover:text-white transition">Contato</a>
             </nav>
 
-            <a href="#contato" class="bg-gradient-to-r from-brand-cyan to-brand-blue hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold text-xs px-4 py-2.5 rounded-lg transition-all transform hover:scale-105 shadow-md shadow-brand-cyan/20 flex items-center gap-2">
-                <i data-lucide="send" class="w-3.5 h-3.5 stroke-[2.5]"></i> Falar Comigo
+            <a href="#contato" class="bg-white hover:bg-slate-200 text-black font-semibold text-xs px-4 py-2 rounded-lg transition flex items-center gap-2">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i> Falar Comigo
             </a>
         </div>
     </header>
@@ -107,7 +103,7 @@
         <!-- Ambient Glow Backdrops -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-tr from-brand-purple/20 to-brand-cyan/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
 
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-violet/40 bg-brand-violet/10 text-brand-violet text-xs font-semibold mb-6 shadow-lg shadow-brand-purple/10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-violet/40 bg-brand-violet/10 text-brand-violet text-xs font-semibold mb-6">
             <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-cyan"></i> Pedro Nantes • Assistente de Edição & Criador
         </div>
         
@@ -120,8 +116,10 @@
         </p>
 
         <!-- SHOWREEL PRINCIPAL (16:9) -->
-        <div class="mt-10 max-w-4xl mx-auto bg-brand-card p-2.5 rounded-2xl border border-brand-border shadow-2xl shadow-brand-purple/20">
+        <div class="mt-10 max-w-4xl mx-auto bg-brand-card p-2 rounded-2xl border border-brand-border shadow-2xl shadow-brand-purple/10">
             <div class="relative aspect-video rounded-xl overflow-hidden bg-black/50 group">
+                <!-- SUBSTÍTUO PELO SEU EMBED DO YOUTUBE NÃO LISTADO -->
+                <!-- Exemplo: https://www.youtube-nocookie.com/embed/SEU_VIDEO_ID -->
                 <iframe 
                     class="w-full h-full"
                     src="https://www.youtube-nocookie.com/embed/525y3IqB474" 
@@ -132,9 +130,7 @@
                 </iframe>
             </div>
             <div class="p-4 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400 border-t border-brand-border/50 mt-2">
-                <span class="flex items-center gap-1.5 font-medium text-slate-300">
-                    <i data-lucide="play-circle" class="w-4 h-4 text-brand-cyan"></i> Showreel Pedro Nantes (0:60)
-                </span>
+                <span class="flex items-center gap-1.5"><i data-lucide="play-circle" class="w-4 h-4 text-brand-cyan"></i> Showreel Pedro Nantes (0:60)</span>
                 <span>Softwares: Premiere Pro, After Effects</span>
             </div>
         </div>
@@ -150,8 +146,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <!-- CARD PROJETO 1 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-violet/50 transition duration-300">
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-slate-700 transition">
                 <div class="aspect-video bg-black">
+                    <!-- Cole aqui o link de um vídeo Não Listado -->
                     <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/525y3IqB474" title="Vlog3 RaphaCN" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="p-5">
@@ -167,8 +164,9 @@
             </div>
 
             <!-- CARD PROJETO 2 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-violet/50 transition duration-300">
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-slate-700 transition">
                 <div class="aspect-video bg-black">
+                    <!-- Cole aqui o link de outro vídeo Não Listado -->
                     <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/rplaSQQ5g" title="Vlog2 RaphaCN" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="p-5">
@@ -196,8 +194,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             <!-- SHORT 1 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center hover:border-brand-cyan/40 transition duration-300">
+            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
+                    <!-- Embed do Shorts do YouTube -->
                     <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Short 1" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="w-full mt-3">
@@ -207,7 +206,7 @@
             </div>
 
             <!-- SHORT 2 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center hover:border-brand-cyan/40 transition duration-300">
+            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
                     <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Short 2" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -218,7 +217,7 @@
             </div>
 
             <!-- SHORT 3 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center hover:border-brand-cyan/40 transition duration-300">
+            <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
                     <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Short 3" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -231,7 +230,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: PROCESSO CRIATIVO / BREAKDOWN -->
+    <!-- SEÇÃO: PROCESSO CRIATIVO / BREAKDOWN (DIFERENCIAL DE ESTAGIÁRIO) -->
     <section id="processo" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/40">
         <div class="mb-10 text-center max-w-2xl mx-auto">
             <h2 class="text-2xl sm:text-3xl font-bold">Por Dentro da Timeline</h2>
@@ -240,17 +239,17 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-brand-card border border-brand-border p-6 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 text-brand-cyan flex items-center justify-center mb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="folder-tree" class="w-5 h-5"></i>
                 </div>
                 <h3 class="font-bold text-base mb-2">1. Organização Rígida</h3>
                 <p class="text-xs text-slate-400 leading-relaxed">
-                    Pastas padronizadas para A-Roll, B-Roll, SFX, Trilha Sonora e VFX. Projeto pronto para ser aberto por qualquer editor sênior.
+                    Pastas padronizadas para A-Roll, B-Roll, SFX, Trilha Sonora e Votantes/Gfx. Projeto pronto para ser aberto por qualquer editor sênior.
                 </p>
             </div>
 
             <div class="bg-brand-card border border-brand-border p-6 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-brand-violet/10 text-brand-violet flex items-center justify-center mb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="scissors" class="w-5 h-5"></i>
                 </div>
                 <h3 class="font-bold text-base mb-2">2. Decupagem Limpa</h3>
@@ -260,12 +259,12 @@
             </div>
 
             <div class="bg-brand-card border border-brand-border p-6 rounded-xl">
-                <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="layers" class="w-5 h-5"></i>
                 </div>
                 <h3 class="font-bold text-base mb-2">3. Camadas de Sonoplastia</h3>
                 <p class="text-xs text-slate-400 leading-relaxed">
-                    Utilização de faixas separadas de áudio para voz, efeitos sonoros (SFX) e música de fundo devidamente equalizada e atenuada (ducking).
+                    Utilização de faixas separadas de áudio para voz, efeitos sonoros (SFX) e música de fundo devidamente equalizada e baixada (ducking).
                 </p>
             </div>
         </div>
@@ -273,10 +272,10 @@
         <!-- STACK DE FERRAMENTAS -->
         <div class="mt-12 bg-brand-card/50 border border-brand-border rounded-xl p-6 flex flex-wrap items-center justify-around gap-6 text-center">
             <div class="flex items-center gap-2 font-medium text-sm text-slate-300">
-                <i data-lucide="film" class="w-4 h-4 text-brand-cyan"></i> Premiere Pro
+                <i data-lucide="film" class="w-4 h-4 text-brand-accent"></i> Premiere Pro
             </div>
             <div class="flex items-center gap-2 font-medium text-sm text-slate-300">
-                <i data-lucide="sparkles" class="w-4 h-4 text-brand-violet"></i> After Effects
+                <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> After Effects
             </div>
             <div class="flex items-center gap-2 font-medium text-sm text-slate-300">
                 <i data-lucide="smartphone" class="w-4 h-4 text-emerald-400"></i> CapCut Pro
@@ -286,11 +285,7 @@
 
     <!-- FOOTER / CONTATO -->
     <footer id="contato" class="py-20 px-4 bg-black border-t border-brand-border">
-        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
-            
-            <!-- LOGO DA MARCA NO RODAPÉ -->
-            <img src="logo.png" alt="Pedro Nantes Edit Logo" class="h-16 w-auto mb-6 object-contain drop-shadow-[0_0_16px_rgba(168,85,247,0.5)]" onerror="this.style.display='none';">
-
+        <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Vamos trabalhar juntos?</h2>
             <p class="text-slate-400 text-sm mt-3 max-w-xl mx-auto">
                 Estou disponível para testes de edição, vagas de estagiário ou assistente de pós-produção para canais do YouTube.
@@ -300,26 +295,24 @@
                 <a href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%98%89%F0%9F%91%8A" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm shadow-lg shadow-emerald-900/20">
                     <i data-lucide="message-square" class="w-4 h-4"></i> Conversar no WhatsApp
                 </a>
-                <a href="mailto:nantesedit09@gmail.com" class="bg-brand-card hover:bg-slate-800 text-slate-200 border border-brand-border font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
+                <a href="mailto:nantesedit09@gmail.com?subject=Solicitação%20de%20edição%20de%20vídeo&body=Olá%20Pedro,%0A%0AGostaria%20de%20falar%20sobre%20um%20projeto%20de%20edição%20de%20vídeo.%0A%0APoderia%20me%20retornar%20para%20mais%20detalhes?" class="bg-brand-card hover:bg-slate-800 text-slate-200 border border-brand-border font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
                     <i data-lucide="mail" class="w-4 h-4"></i> Enviar E-mail
                 </a>
             </div>
 
-            <div class="mt-12 text-xs text-slate-500 flex justify-center gap-6">
-                <span>Discord: <strong class="text-slate-300">pedronantes#0000</strong></span>
+            <div class="mt-12 text-xs text-slate-600 flex justify-center gap-6">
+                <span>Discord: <strong class="text-slate-400">nantesedit</strong></span>
                 <span>•</span>
-                <span>Localização: <strong class="text-slate-300">Brasil (Remoto)</strong></span>
+                <span>Localização: <strong class="text-slate-400">Brasil (Remoto)</strong></span>
             </div>
 
-            <p class="mt-8 text-[11px] text-slate-600">© 2026 - Pedro Nantes Edit. Todos os direitos reservados.</p>
+            <p class="mt-8 text-[11px] text-slate-700">© 2026 - Pedro Nantes Edit. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Inicializador dos Ícones Lucide -->
     <script>
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
+        lucide.createIcons();
     </script>
 </body>
 </html>
