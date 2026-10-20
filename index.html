@@ -50,17 +50,14 @@
         }
         .scroll-reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 600ms ease, transform 600ms ease;
+            transition: opacity 600ms ease;
         }
         .scroll-reveal.is-visible {
             opacity: 1;
-            transform: translateY(0);
         }
         @media (prefers-reduced-motion: reduce) {
             .scroll-reveal {
                 opacity: 1;
-                transform: none;
                 transition: none;
             }
         }
@@ -573,7 +570,10 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.12 });
+            }, {
+                rootMargin: `0px 0px -${Math.round(window.innerHeight / 3)}px 0px`,
+                threshold: 0
+            });
             const revealTargets = document.querySelectorAll(
                 '#showreel > .inline-flex, #showreel > h1, #showreel > p, #showreel > .mt-10, ' +
                 '#youtube > .mb-10, #youtube .grid > div, ' +
