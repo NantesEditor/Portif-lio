@@ -514,7 +514,7 @@
             document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
                 element.alt = copy[element.dataset.i18nAlt];
             });
-            languageToggle.textContent = language === 'en' ? 'PT' : 'EN';
+            languageToggle.querySelector('span').textContent = language === 'en' ? 'PT' : 'EN';
             languageToggle.setAttribute('aria-label', language === 'en' ? 'Mudar idioma para português' : 'Switch language to English');
             const message = encodeURIComponent(whatsappMessage[language]);
             document.getElementById('dialog-whatsapp').href = `https://wa.me/5567992751712?text=${message}`;
