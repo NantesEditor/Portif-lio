@@ -97,33 +97,37 @@
             </a>
             
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-                <a href="#showreel" class="hover:text-white transition">Showreel</a>
-                <a href="#youtube" class="hover:text-white transition">YouTube (Long-form)</a>
-                <a href="#shorts" class="hover:text-white transition">Shorts / Reels</a>
-                <a href="#processo" class="hover:text-white transition">Processo Criativo</a>
-                <a href="#contato" class="hover:text-white transition">Contato</a>
+                <a href="#showreel" class="hover:text-white transition" data-i18n="navShowreel">Showreel</a>
+                <a href="#youtube" class="hover:text-white transition" data-i18n="navYoutube">YouTube (Long-form)</a>
+                <a href="#shorts" class="hover:text-white transition" data-i18n="navShorts">Shorts / Reels</a>
+                <a href="#processo" class="hover:text-white transition" data-i18n="navProcess">Processo Criativo</a>
+                <a href="#contato" class="hover:text-white transition" data-i18n="navContact">Contato</a>
             </nav>
 
-            <button type="button" id="open-contact-dialog" class="bg-white hover:bg-slate-200 text-black font-semibold text-xs px-4 py-2 rounded-lg transition flex items-center gap-2">
-                <i data-lucide="send" class="w-3.5 h-3.5"></i> Falar Comigo
-            </button>
+            <div class="flex flex-col items-end gap-1">
+                <button type="button" id="open-contact-dialog" class="bg-white hover:bg-slate-200 text-black font-semibold text-xs px-4 py-2 rounded-lg transition flex items-center gap-2">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                    <span data-i18n="contactButton">Falar Comigo</span>
+                </button>
+                <button type="button" id="language-toggle" class="rounded-md px-2 py-1 text-[10px] font-bold tracking-wider text-slate-300 hover:bg-white/10 hover:text-white transition" aria-label="Switch language to English">EN</button>
+            </div>
         </div>
     </header>
 
     <dialog id="contact-dialog" aria-labelledby="contact-dialog-title" class="w-[calc(100%-2rem)] max-w-md rounded-2xl border border-brand-border bg-brand-card p-6 text-slate-100 shadow-2xl backdrop:bg-black/70">
         <div class="flex items-start justify-between gap-4">
             <div>
-                <h2 id="contact-dialog-title" class="text-xl font-bold">Vamos conversar?</h2>
-                <p class="mt-1 text-sm text-slate-400">Escolha por onde prefere falar comigo.</p>
+                <h2 id="contact-dialog-title" class="text-xl font-bold" data-i18n="dialogTitle">Vamos conversar?</h2>
+                <p class="mt-1 text-sm text-slate-400" data-i18n="dialogDescription">Escolha por onde prefere falar comigo.</p>
             </div>
             <form method="dialog">
-                <button type="submit" aria-label="Fechar" class="rounded-lg p-2 text-slate-400 hover:bg-white/10 hover:text-white transition">
+                <button type="submit" aria-label="Fechar" data-i18n-aria="closeDialog" class="rounded-lg p-2 text-slate-400 hover:bg-white/10 hover:text-white transition">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </form>
         </div>
         <div class="mt-6 grid gap-3">
-            <a href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%20%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%A4%A9%F0%9F%91%8A%F0%9F%8F%BC" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+            <a id="dialog-whatsapp" href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%20%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%A4%A9%F0%9F%91%8A%F0%9F%8F%BC" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
                 <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp
             </a>
             <a href="https://discord.com/users/231973476229971970" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
@@ -138,14 +142,14 @@
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-tr from-brand-purple/20 to-brand-cyan/20 blur-3xl rounded-full -z-10 pointer-events-none"></div>
 
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-violet/40 bg-brand-violet/10 text-brand-violet text-xs font-semibold mb-6">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-cyan"></i> Pedro Nantes • Assistente de Edição & Criador
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-cyan"></i> <span data-i18n="heroRole">Pedro Nantes • Assistente de Edição & Criador</span>
         </div>
         
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight" data-i18n-html="heroHeadline">
             Transformando gravações brutas em vídeos de <span class="bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-violet bg-clip-text text-transparent">alta retenção</span>.
         </h1>
         
-        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-base sm:text-lg">
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-base sm:text-lg" data-i18n="heroDescription">
             Focado em ritmo acelerado, sonoplastia imersiva, cortes precisos e organização para otimizar o fluxo de grandes canais do YouTube.
         </p>
 
@@ -164,8 +168,8 @@
                 </iframe>
             </div>
             <div class="p-4 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400 border-t border-brand-border/50 mt-2">
-                <span class="flex items-center gap-1.5"><i data-lucide="play-circle" class="w-4 h-4 text-brand-cyan"></i> Showreel Pedro Nantes (0:60)</span>
-                <span>Softwares: Premiere Pro, After Effects</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="play-circle" class="w-4 h-4 text-brand-cyan"></i> <span data-i18n="showreelLabel">Showreel Pedro Nantes (0:60)</span></span>
+                <span><span data-i18n="softwareLabel">Softwares</span>: Premiere Pro, After Effects</span>
             </div>
         </div>
     </section>
@@ -173,8 +177,8 @@
     <!-- SEÇÃO: VÍDEOS DO YOUTUBE (LONG-FORM) -->
     <section id="youtube" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/40">
         <div class="mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold">Projetos YouTube (Long-Form)</h2>
-            <p class="text-slate-400 text-sm mt-1">Exemplos de ritmo de edição, tratamento de som e narrativa aplicados a vídeos mais longos.</p>
+            <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="youtubeHeading">Projetos YouTube (Long-Form)</h2>
+            <p class="text-slate-400 text-sm mt-1" data-i18n="youtubeDescription">Exemplos de ritmo de edição, tratamento de som e narrativa aplicados a vídeos mais longos.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,11 +191,11 @@
                 </div>
                 <div class="p-5">
                     <div class="flex items-center gap-2 mb-2">
-                        <span class="text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-0.5 rounded">Retenção & Hooks</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-0.5 rounded" data-i18n="retentionTag">Retenção & Hooks</span>
                         <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded">Gaming / Vlog</span>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-100">Edição Dinâmica com Animações de Texto</h3>
-                    <p class="text-slate-400 text-sm mt-2">
+                    <h3 class="font-bold text-lg text-slate-100" data-i18n="projectOneTitle">Edição Dinâmica com Animações de Texto</h3>
+                    <p class="text-slate-400 text-sm mt-2" data-i18n="projectOneDescription">
                         Trabalho focado na criação de ganchos nos primeiros 5 segundos, corte de silêncios, inserção de B-Rolls e efeitos sonoros pontuais para manter a atenção do espectador.
                     </p>
                 </div>
@@ -206,10 +210,10 @@
                 <div class="p-5">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded">Sound Design</span>
-                        <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded">Documentário / Vídeo Ensaio</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded" data-i18n="documentaryTag">Documentário / Vídeo Ensaio</span>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-100">Ritmo Cadenciado & Trilha Sonora Emocional</h3>
-                    <p class="text-slate-400 text-sm mt-2">
+                    <h3 class="font-bold text-lg text-slate-100" data-i18n="projectTwoTitle">Ritmo Cadenciado & Trilha Sonora Emocional</h3>
+                    <p class="text-slate-400 text-sm mt-2" data-i18n="projectTwoDescription">
                         Foco em mixagem de áudio limpa, nivelamento de vozes, sonoplastia de impacto e transições orgânicas de cena.
                     </p>
                 </div>
@@ -221,8 +225,8 @@
     <!-- SEÇÃO: CORTES VERTICAIS (SHORTS / REELS / TIKTOK) -->
     <section id="shorts" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/40">
         <div class="mb-10">
-            <h2 class="text-2xl sm:text-3xl font-bold">Cortes Curtos (Shorts / Reels)</h2>
-            <p class="text-slate-400 text-sm mt-1">Reaproveitamento de conteúdo longo para formatos verticais de alto engajamento (9:16).</p>
+            <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="shortsHeading">Cortes Curtos (Shorts / Reels)</h2>
+            <p class="text-slate-400 text-sm mt-1" data-i18n="shortsDescription">Reaproveitamento de conteúdo longo para formatos verticais de alto engajamento (9:16).</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -230,10 +234,10 @@
             <!-- SHORT 1 -->
             <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="short-video w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1j8QRbO46o-NDCfC9gOK7WQHB5vQ4Cj9o/preview" data-video-title="Codinome Winchester" aria-label="Reproduzir show ao vivo de Codinome Winchester">
-                        <img class="absolute inset-0 w-full h-full object-cover" src="codinome-winchester-capa.png" alt="Baterista tocando ao vivo no show de Codinome Winchester">
+                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1j8QRbO46o-NDCfC9gOK7WQHB5vQ4Cj9o/preview" data-video-title="Codinome Winchester" aria-label="Reproduzir show ao vivo de Codinome Winchester" data-i18n-aria="playWinchester">
+                        <img class="absolute inset-0 w-full h-full object-cover" src="codinome-winchester-capa.png" alt="Baterista tocando ao vivo no show de Codinome Winchester" data-i18n-alt="winchesterCoverAlt">
                         <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent px-4 pb-5 pt-16 text-white">
-                            <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan">Ao vivo</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan" data-i18n="liveLabel">Ao vivo</span>
                             <span class="mt-1 block font-brand text-base font-black leading-tight">CODINOME<br>WINCHESTER</span>
                         </span>
                         <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-black/70 text-white group-hover:bg-brand-cyan group-focus-visible:ring-2 group-focus-visible:ring-white transition">
@@ -243,17 +247,17 @@
                 </div>
                 <div class="w-full mt-3">
                     <h4 class="font-semibold text-sm">Codinome Winchester</h4>
-                    <p class="text-xs text-slate-400 mt-1">Animação de palavras-chave, efeitos de zoom in/out e SFX rápidos.</p>
+                    <p class="text-xs text-slate-400 mt-1" data-i18n="shortOneDescription">Animação de palavras-chave, efeitos de zoom in/out e SFX rápidos.</p>
                 </div>
             </div>
 
             <!-- SHORT 2 -->
             <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="short-video w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1mx08SOkvvnsTVXz3KYf0gJnxymYQLxPK/preview" data-video-title="Marketing - Sabrina Sanches" aria-label="Reproduzir anúncio de Marketing da Sabrina Sanches">
-                        <img class="absolute inset-0 w-full h-full object-cover" src="marketing-capa.png" alt="Capa do anúncio da profissional Sabrina Sanches">
+                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1mx08SOkvvnsTVXz3KYf0gJnxymYQLxPK/preview" data-video-title="Marketing" aria-label="Reproduzir anúncio de Marketing" data-i18n-aria="playMarketing">
+                        <img class="absolute inset-0 w-full h-full object-cover" src="marketing-capa.png" alt="Capa do anúncio da profissional Sabrina Sanches" data-i18n-alt="marketingCoverAlt">
                         <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent px-4 pb-5 pt-16 text-white">
-                            <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan">Anúncio</span>
+                            <span class="block text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan" data-i18n="adLabel">Anúncio</span>
                             <span class="mt-1 block font-brand text-base font-black leading-tight">MARKETING</span>
                         </span>
                         <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-black/70 text-white group-hover:bg-brand-cyan group-focus-visible:ring-2 group-focus-visible:ring-white transition">
@@ -263,15 +267,15 @@
                 </div>
                 <div class="w-full mt-3">
                     <h4 class="font-semibold text-sm">Marketing</h4>
-                    <p class="text-xs text-slate-400 mt-1">Anúncio em formato vertical para divulgar serviços profissionais e o espaço de atendimento.</p>
+                    <p class="text-xs text-slate-400 mt-1" data-i18n="shortTwoDescription">Anúncio em formato vertical para divulgar serviços profissionais e o espaço de atendimento.</p>
                 </div>
             </div>
 
             <!-- SHORT 3 -->
             <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="short-video w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1eR266_RVxolTw2HSH3Lg9f3aNBDe9L-J/preview" data-video-title="Marketing (DR)" aria-label="Reproduzir vídeo Marketing (DR)">
-                        <img class="absolute inset-0 w-full h-full object-cover" src="marketing-dr-capa.png" alt="Capa do vídeo Marketing (DR), com Mario Montes e o texto Seis Idiomas">
+                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1eR266_RVxolTw2HSH3Lg9f3aNBDe9L-J/preview" data-video-title="Marketing (DR)" aria-label="Reproduzir vídeo Marketing (DR)" data-i18n-aria="playMarketingDR">
+                        <img class="absolute inset-0 w-full h-full object-cover" src="marketing-dr-capa.png" alt="Capa do vídeo Marketing (DR), com Mario Montes e o texto Seis Idiomas" data-i18n-alt="marketingDRCoverAlt">
                         <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-black/70 text-white group-hover:bg-brand-cyan group-focus-visible:ring-2 group-focus-visible:ring-white transition">
                             <i data-lucide="play" class="w-7 h-7 fill-current"></i>
                         </span>
@@ -279,7 +283,7 @@
                 </div>
                 <div class="w-full mt-3">
                     <h4 class="font-semibold text-sm">Marketing (DR)</h4>
-                    <p class="text-xs text-slate-400 mt-1">Vídeo promocional em formato vertical para divulgação de serviços profissionais.</p>
+                    <p class="text-xs text-slate-400 mt-1" data-i18n="shortThreeDescription">Vídeo promocional em formato vertical para divulgação de serviços profissionais.</p>
                 </div>
             </div>
 
@@ -289,8 +293,8 @@
     <!-- SEÇÃO: PROCESSO CRIATIVO / BREAKDOWN (DIFERENCIAL DE ESTAGIÁRIO) -->
     <section id="processo" class="py-16 px-4 max-w-6xl mx-auto border-t border-brand-border/40">
         <div class="mb-10 text-center max-w-2xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold">Por Dentro da Timeline</h2>
-            <p class="text-slate-400 text-sm mt-1">Organização de projeto é o que transforma um estagiário em um assistente indispensável.</p>
+            <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="processHeading">Por Dentro da Timeline</h2>
+            <p class="text-slate-400 text-sm mt-1" data-i18n="processDescription">Organização de projeto é o que transforma um estagiário em um assistente indispensável.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -298,8 +302,8 @@
                 <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="folder-tree" class="w-5 h-5"></i>
                 </div>
-                <h3 class="font-bold text-base mb-2">1. Organização Rígida</h3>
-                <p class="text-xs text-slate-400 leading-relaxed">
+                <h3 class="font-bold text-base mb-2" data-i18n="processOneTitle">1. Organização Rígida</h3>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="processOneDescription">
                     Pastas padronizadas para A-Roll, B-Roll, SFX, Trilha Sonora e Votantes/Gfx. Projeto pronto para ser aberto por qualquer editor sênior.
                 </p>
             </div>
@@ -308,8 +312,8 @@
                 <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="scissors" class="w-5 h-5"></i>
                 </div>
-                <h3 class="font-bold text-base mb-2">2. Decupagem Limpa</h3>
-                <p class="text-xs text-slate-400 leading-relaxed">
+                <h3 class="font-bold text-base mb-2" data-i18n="processTwoTitle">2. Decupagem Limpa</h3>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="processTwoDescription">
                     Sincronização multicâmera, limpeza de vícios de linguagem ("hã", "é"), respirações excessivas e montagem do primeiro corte bruto (A-Roll).
                 </p>
             </div>
@@ -318,8 +322,8 @@
                 <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
                     <i data-lucide="layers" class="w-5 h-5"></i>
                 </div>
-                <h3 class="font-bold text-base mb-2">3. Camadas de Sonoplastia</h3>
-                <p class="text-xs text-slate-400 leading-relaxed">
+                <h3 class="font-bold text-base mb-2" data-i18n="processThreeTitle">3. Camadas de Sonoplastia</h3>
+                <p class="text-xs text-slate-400 leading-relaxed" data-i18n="processThreeDescription">
                     Utilização de faixas separadas de áudio para voz, efeitos sonoros (SFX) e música de fundo devidamente equalizada e baixada (ducking).
                 </p>
             </div>
@@ -342,36 +346,186 @@
     <!-- FOOTER / CONTATO -->
     <footer id="contato" class="py-20 px-4 bg-black border-t border-brand-border">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Vamos trabalhar juntos?</h2>
-            <p class="text-slate-400 text-sm mt-3 max-w-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-i18n="footerHeading">Vamos trabalhar juntos?</h2>
+            <p class="text-slate-400 text-sm mt-3 max-w-xl mx-auto" data-i18n="footerDescription">
                 Estou disponível para testes de edição, vagas de estagiário ou assistente de pós-produção para canais do YouTube.
             </p>
 
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%20%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%A4%A9%F0%9F%91%8A%F0%9F%8F%BC" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm shadow-lg shadow-emerald-900/20">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> Conversar no WhatsApp
+                <a id="footer-whatsapp" href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%20%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%A4%A9%F0%9F%91%8A%F0%9F%8F%BC" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm shadow-lg shadow-emerald-900/20">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> <span data-i18n="footerWhatsapp">Conversar no WhatsApp</span>
                 </a>
                 <a href="https://discord.com/users/231973476229971970" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm shadow-lg shadow-indigo-900/20">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i> Acessar Discord
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> <span data-i18n="footerDiscord">Acessar Discord</span>
                 </a>
-                <a href="mailto:nantesedit09@gmail.com?subject=Solicitação%20de%20edição%20de%20vídeo&body=Olá%20Pedro,%0A%0AGostaria%20de%20falar%20sobre%20um%20projeto%20de%20edição%20de%20vídeo.%0A%0APoderia%20me%20retornar%20para%20mais%20detalhes?" class="bg-brand-card hover:bg-slate-800 text-slate-200 border border-brand-border font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
-                    <i data-lucide="mail" class="w-4 h-4"></i> Enviar E-mail
+                <a id="footer-email" href="mailto:nantesedit09@gmail.com?subject=Solicitação%20de%20edição%20de%20vídeo&body=Olá%20Pedro,%0A%0AGostaria%20de%20falar%20sobre%20um%20projeto%20de%20edição%20de%20vídeo.%0A%0APoderia%20me%20retornar%20para%20mais%20detalhes?" class="bg-brand-card hover:bg-slate-800 text-slate-200 border border-brand-border font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
+                    <i data-lucide="mail" class="w-4 h-4"></i> <span data-i18n="footerEmail">Enviar E-mail</span>
                 </a>
             </div>
 
             <div class="mt-12 text-xs text-slate-600 flex justify-center gap-6">
                 <span>Discord: <strong class="text-slate-400">nantesedit</strong></span>
                 <span>•</span>
-                <span>Localização: <strong class="text-slate-400">Brasil (Remoto)</strong></span>
+                <span><span data-i18n="locationLabel">Localização</span>: <strong class="text-slate-400" data-i18n="locationValue">Brasil (Remoto)</strong></span>
             </div>
 
-            <p class="mt-8 text-[11px] text-slate-700">© 2026 - Pedro Nantes Edit. Todos os direitos reservados.</p>
+            <p class="mt-8 text-[11px] text-slate-700" data-i18n="copyright">© 2026 - Pedro Nantes Edit. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Inicializador dos Ícones Lucide -->
     <script>
         lucide.createIcons();
+        const translations = {
+            en: {
+                navShowreel: 'Showreel',
+                navYoutube: 'YouTube (Long-form)',
+                navShorts: 'Shorts / Reels',
+                navProcess: 'Creative Process',
+                navContact: 'Contact',
+                contactButton: 'Contact Me',
+                dialogTitle: "Let's talk",
+                dialogDescription: 'Choose how you would like to get in touch.',
+                closeDialog: 'Close',
+                heroRole: 'Pedro Nantes • Editing Assistant & Creator',
+                heroHeadline: 'Turning raw footage into <span class="bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-violet bg-clip-text text-transparent">high-retention</span> videos.',
+                heroDescription: 'Focused on fast pacing, immersive sound design, precise cuts, and organized workflows for major YouTube channels.',
+                showreelLabel: 'Pedro Nantes Showreel (0:60)',
+                softwareLabel: 'Software',
+                youtubeHeading: 'YouTube Projects (Long-form)',
+                youtubeDescription: 'Examples of editing pace, sound treatment, and storytelling applied to longer videos.',
+                retentionTag: 'Retention & Hooks',
+                projectOneTitle: 'Dynamic Editing with Text Animations',
+                projectOneDescription: 'Focused on creating hooks in the first five seconds, removing pauses, adding B-roll, and placing sound effects to keep viewers engaged.',
+                documentaryTag: 'Documentary / Video Essay',
+                projectTwoTitle: 'Measured Pacing & Emotional Soundtrack',
+                projectTwoDescription: 'Focused on clean audio mixing, voice leveling, impactful sound design, and seamless scene transitions.',
+                shortsHeading: 'Short-form Videos (Shorts / Reels)',
+                shortsDescription: 'Repurposing long-form content into engaging vertical videos (9:16).',
+                liveLabel: 'Live',
+                shortOneDescription: 'Animated keywords, zoom effects, and quick sound effects.',
+                adLabel: 'Ad',
+                shortTwoDescription: 'A vertical ad promoting professional services and their place of business.',
+                shortThreeDescription: 'A vertical promotional video showcasing professional services.',
+                processHeading: 'Behind the Timeline',
+                processDescription: 'Organized projects turn an editing intern into an indispensable assistant.',
+                processOneTitle: '1. Structured Organization',
+                processOneDescription: 'Consistent folders for A-roll, B-roll, sound effects, music, and graphics. Projects are ready for any senior editor to open.',
+                processTwoTitle: '2. Clean Footage Breakdown',
+                processTwoDescription: 'Multicamera syncing, removing filler words and excessive breaths, and assembling the first rough A-roll cut.',
+                processThreeTitle: '3. Layered Sound Design',
+                processThreeDescription: 'Separate audio tracks for dialogue, sound effects (SFX), and properly equalized, ducked background music.',
+                footerHeading: "Let's work together",
+                footerDescription: 'Available for editing tests, internship roles, or post-production assistant positions for YouTube channels.',
+                footerWhatsapp: 'Chat on WhatsApp',
+                footerDiscord: 'Open Discord',
+                footerEmail: 'Send an Email',
+                locationLabel: 'Location',
+                locationValue: 'Brazil (Remote)',
+                copyright: '© 2026 - Pedro Nantes Edit. All rights reserved.',
+                playWinchester: 'Play Codinome Winchester live show',
+                winchesterCoverAlt: 'Drummer performing live at a Codinome Winchester show',
+                playMarketing: 'Play Marketing ad',
+                marketingCoverAlt: 'Cover image for a professional services advertisement',
+                playMarketingDR: 'Play Marketing (DR) video',
+                marketingDRCoverAlt: 'Marketing (DR) cover featuring Mario Montes and the words Six Languages'
+            },
+            pt: {
+                navShowreel: 'Showreel',
+                navYoutube: 'YouTube (Long-form)',
+                navShorts: 'Shorts / Reels',
+                navProcess: 'Processo Criativo',
+                navContact: 'Contato',
+                contactButton: 'Falar Comigo',
+                dialogTitle: 'Vamos conversar?',
+                dialogDescription: 'Escolha por onde prefere falar comigo.',
+                closeDialog: 'Fechar',
+                heroRole: 'Pedro Nantes • Assistente de Edição & Criador',
+                heroHeadline: 'Transformando gravações brutas em vídeos de <span class="bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-violet bg-clip-text text-transparent">alta retenção</span>.',
+                heroDescription: 'Focado em ritmo acelerado, sonoplastia imersiva, cortes precisos e organização para otimizar o fluxo de grandes canais do YouTube.',
+                showreelLabel: 'Showreel Pedro Nantes (0:60)',
+                softwareLabel: 'Softwares',
+                youtubeHeading: 'Projetos YouTube (Long-Form)',
+                youtubeDescription: 'Exemplos de ritmo de edição, tratamento de som e narrativa aplicados a vídeos mais longos.',
+                retentionTag: 'Retenção & Hooks',
+                projectOneTitle: 'Edição Dinâmica com Animações de Texto',
+                projectOneDescription: 'Trabalho focado na criação de ganchos nos primeiros 5 segundos, corte de silêncios, inserção de B-Rolls e efeitos sonoros pontuais para manter a atenção do espectador.',
+                documentaryTag: 'Documentário / Vídeo Ensaio',
+                projectTwoTitle: 'Ritmo Cadenciado & Trilha Sonora Emocional',
+                projectTwoDescription: 'Foco em mixagem de áudio limpa, nivelamento de vozes, sonoplastia de impacto e transições orgânicas de cena.',
+                shortsHeading: 'Cortes Curtos (Shorts / Reels)',
+                shortsDescription: 'Reaproveitamento de conteúdo longo para formatos verticais de alto engajamento (9:16).',
+                liveLabel: 'Ao vivo',
+                shortOneDescription: 'Animação de palavras-chave, efeitos de zoom in/out e SFX rápidos.',
+                adLabel: 'Anúncio',
+                shortTwoDescription: 'Anúncio em formato vertical para divulgar serviços profissionais e o espaço de atendimento.',
+                shortThreeDescription: 'Vídeo promocional em formato vertical para divulgação de serviços profissionais.',
+                processHeading: 'Por Dentro da Timeline',
+                processDescription: 'Organização de projeto é o que transforma um estagiário em um assistente indispensável.',
+                processOneTitle: '1. Organização Rígida',
+                processOneDescription: 'Pastas padronizadas para A-Roll, B-Roll, SFX, Trilha Sonora e Votantes/Gfx. Projeto pronto para ser aberto por qualquer editor sênior.',
+                processTwoTitle: '2. Decupagem Limpa',
+                processTwoDescription: 'Sincronização multicâmera, limpeza de vícios de linguagem ("hã", "é"), respirações excessivas e montagem do primeiro corte bruto (A-Roll).',
+                processThreeTitle: '3. Camadas de Sonoplastia',
+                processThreeDescription: 'Utilização de faixas separadas de áudio para voz, efeitos sonoros (SFX) e música de fundo devidamente equalizada e baixada (ducking).',
+                footerHeading: 'Vamos trabalhar juntos?',
+                footerDescription: 'Estou disponível para testes de edição, vagas de estagiário ou assistente de pós-produção para canais do YouTube.',
+                footerWhatsapp: 'Conversar no WhatsApp',
+                footerDiscord: 'Acessar Discord',
+                footerEmail: 'Enviar E-mail',
+                locationLabel: 'Localização',
+                locationValue: 'Brasil (Remoto)',
+                copyright: '© 2026 - Pedro Nantes Edit. Todos os direitos reservados.',
+                playWinchester: 'Reproduzir show ao vivo de Codinome Winchester',
+                winchesterCoverAlt: 'Baterista tocando ao vivo no show de Codinome Winchester',
+                playMarketing: 'Reproduzir anúncio de Marketing',
+                marketingCoverAlt: 'Capa do anúncio da profissional Sabrina Sanches',
+                playMarketingDR: 'Reproduzir vídeo Marketing (DR)',
+                marketingDRCoverAlt: 'Capa do vídeo Marketing (DR), com Mario Montes e o texto Seis Idiomas'
+            }
+        };
+        const languageToggle = document.getElementById('language-toggle');
+        const footerEmail = document.getElementById('footer-email');
+        const whatsappMessage = {
+            pt: 'Olá Pedro, gostaria de conversar sobre um projeto de edição de vídeo.',
+            en: "Hi Pedro, I'd like to discuss a video editing project."
+        };
+        let currentLanguage = 'pt';
+
+        function setLanguage(language) {
+            currentLanguage = language;
+            const copy = translations[language];
+            document.documentElement.lang = language === 'en' ? 'en' : 'pt-BR';
+            document.title = language === 'en'
+                ? 'Pedro Nantes Edit | Video Editing Portfolio'
+                : 'Pedro Nantes Edit | Portfólio de Edição de Vídeo';
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                element.textContent = copy[element.dataset.i18n];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach((element) => {
+                element.innerHTML = copy[element.dataset.i18nHtml];
+            });
+            document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+                element.setAttribute('aria-label', copy[element.dataset.i18nAria]);
+            });
+            document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+                element.alt = copy[element.dataset.i18nAlt];
+            });
+            languageToggle.textContent = language === 'en' ? 'PT' : 'EN';
+            languageToggle.setAttribute('aria-label', language === 'en' ? 'Mudar idioma para português' : 'Switch language to English');
+            const message = encodeURIComponent(whatsappMessage[language]);
+            document.getElementById('dialog-whatsapp').href = `https://wa.me/5567992751712?text=${message}`;
+            document.getElementById('footer-whatsapp').href = `https://wa.me/5567992751712?text=${message}`;
+            const emailSubject = encodeURIComponent(language === 'en' ? 'Video editing inquiry' : 'Solicitação de edição de vídeo');
+            const emailBody = encodeURIComponent(language === 'en'
+                ? "Hi Pedro,\n\nI'd like to discuss a video editing project.\n\nCould you get back to me with more details?"
+                : 'Olá Pedro,\n\nGostaria de falar sobre um projeto de edição de vídeo.\n\nPoderia me retornar para mais detalhes?');
+            footerEmail.href = `mailto:nantesedit09@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+        }
+
+        languageToggle.addEventListener('click', () => {
+            setLanguage(currentLanguage === 'pt' ? 'en' : 'pt');
+        });
         const contactDialog = document.getElementById('contact-dialog');
         document.getElementById('open-contact-dialog').addEventListener('click', () => {
             contactDialog.showModal();
