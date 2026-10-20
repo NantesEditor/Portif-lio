@@ -36,6 +36,18 @@
         }
     </script>
     <style>
+        body {
+            position: relative;
+            isolation: isolate;
+        }
+        body::before {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(rgba(11, 11, 14, 0.93), rgba(11, 11, 14, 0.93)), url("timeline-bg.jpg") center / cover no-repeat;
+            content: "";
+            pointer-events: none;
+        }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
