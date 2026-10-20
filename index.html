@@ -104,11 +104,33 @@
                 <a href="#contato" class="hover:text-white transition">Contato</a>
             </nav>
 
-            <a href="#contato" class="bg-white hover:bg-slate-200 text-black font-semibold text-xs px-4 py-2 rounded-lg transition flex items-center gap-2">
+            <button type="button" id="open-contact-dialog" class="bg-white hover:bg-slate-200 text-black font-semibold text-xs px-4 py-2 rounded-lg transition flex items-center gap-2">
                 <i data-lucide="send" class="w-3.5 h-3.5"></i> Falar Comigo
-            </a>
+            </button>
         </div>
     </header>
+
+    <dialog id="contact-dialog" aria-labelledby="contact-dialog-title" class="w-[calc(100%-2rem)] max-w-md rounded-2xl border border-brand-border bg-brand-card p-6 text-slate-100 shadow-2xl backdrop:bg-black/70">
+        <div class="flex items-start justify-between gap-4">
+            <div>
+                <h2 id="contact-dialog-title" class="text-xl font-bold">Vamos conversar?</h2>
+                <p class="mt-1 text-sm text-slate-400">Escolha por onde prefere falar comigo.</p>
+            </div>
+            <form method="dialog">
+                <button type="submit" aria-label="Fechar" class="rounded-lg p-2 text-slate-400 hover:bg-white/10 hover:text-white transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </form>
+        </div>
+        <div class="mt-6 grid gap-3">
+            <a href="https://wa.me/5567992751712?text=Ol%C3%A1%20Nantes%F0%9F%8E%AC%20%2C%20gostaria%20de%20falar%20sobre%20edi%C3%A7%C3%A3o%20de%20qualidade%20%F0%9F%A4%A9%F0%9F%91%8A%F0%9F%8F%BC" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="https://discord.com/users/231973476229971970" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Discord
+            </a>
+        </div>
+    </dialog>
 
     <!-- HERO SECTION -->
     <section id="showreel" class="pt-32 pb-16 px-4 max-w-6xl mx-auto text-center relative">
@@ -350,6 +372,15 @@
     <!-- Inicializador dos Ícones Lucide -->
     <script>
         lucide.createIcons();
+        const contactDialog = document.getElementById('contact-dialog');
+        document.getElementById('open-contact-dialog').addEventListener('click', () => {
+            contactDialog.showModal();
+        });
+        contactDialog.addEventListener('click', (event) => {
+            if (event.target === contactDialog) {
+                contactDialog.close();
+            }
+        });
         document.querySelectorAll('.short-video-cover').forEach((cover) => {
             cover.addEventListener('click', () => {
                 const video = document.createElement('iframe');
