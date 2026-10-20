@@ -236,7 +236,12 @@
             <!-- SHORT 3 -->
             <div class="bg-brand-card border border-brand-border rounded-xl p-3 flex flex-col items-center">
                 <div class="short-video w-full aspect-[9/16] bg-black rounded-lg overflow-hidden">
-                    <iframe class="w-full h-full" src="https://drive.google.com/file/d/1eR266_RVxolTw2HSH3Lg9f3aNBDe9L-J/preview" title="Marketing (DR)" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                    <button type="button" class="short-video-cover relative w-full h-full flex items-center justify-center bg-black group text-left" data-video-src="https://drive.google.com/file/d/1eR266_RVxolTw2HSH3Lg9f3aNBDe9L-J/preview" data-video-title="Marketing (DR)" aria-label="Reproduzir vídeo Marketing (DR)">
+                        <img class="absolute inset-0 w-full h-full object-cover" src="marketing-dr-capa.png" alt="Capa do vídeo Marketing (DR), com Mario Montes e o texto Seis Idiomas">
+                        <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-black/70 text-white group-hover:bg-brand-cyan group-focus-visible:ring-2 group-focus-visible:ring-white transition">
+                            <i data-lucide="play" class="w-7 h-7 fill-current"></i>
+                        </span>
+                    </button>
                 </div>
                 <div class="w-full mt-3">
                     <h4 class="font-semibold text-sm">Marketing (DR)</h4>
